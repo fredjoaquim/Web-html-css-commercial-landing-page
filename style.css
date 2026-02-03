@@ -67,9 +67,25 @@ li {
     margin-bottom: 10px;
 }
 
-footer {
-    padding: 15px;
-    font-size: 14px;
+.footer-minimal {
+  width: 100%;
+  padding: 20px 0;
+  background: transparent; /* sem cor por padrão */
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+
+  font-size: 15px;  /* ← pode ajustar */
+  color:#fff;      /* ← pode ajustar a cor */
+}
+
+.footer-logo {
+  width: 200px;     /* ← pode ajustar o tamanho */
+  height: auto;
 }
 
 @media (max-width: 480px) {
