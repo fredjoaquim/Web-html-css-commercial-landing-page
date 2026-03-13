@@ -1,47 +1,57 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing-Page</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Garante a responsividade em dispositivos móveis -->
+    <title>Landing-Page</title> <!-- Título da aba do navegador -->
+    <link rel="stylesheet" href="style.css"> <!-- Link para o arquivo CSS externo -->
 </head>
-
 <body>
-    <header>
-        <h1>Site simples e profissional para o seu negócio</h1>
-        <h2>Tenha presença online, atraia clientes e facilite o contato pelo whatsApp</h2>
-    </header>
- <a class="btn" href="https://wa.me/38991216266">Falar no WhatsApp</a>
+    <main> <!-- Tag semântica para o conteúdo principal da página -->
+        <header class="header"> <!-- Classe adicionada para corresponder ao CSS .header -->
+            <h1>Tenha um site profissional e comece a atrair clientes na internet</h1> <!-- Título principal da página -->
+            <p class="hero-subtitle"> <!-- Parágrafo com subtítulo hero -->
+                Seu negócio online com uma página rápida, moderna e com contato direto pelo WhatsApp.
+            </p>
+            <a class="btn-primary" href="https://wa.me/5538991216266" target="_blank"> <!-- Botão principal de call-to-action -->
+                Quero meu site
+            </a>
+        </header>
 
- <section>
-    <h2>O que ofereço</h2>
-    <ul>
-        <li>Página profissional</li>
-        <li>Design limpo e responsivo</li>
-        <li>Botão de WhatsApp</li>
-        <li>Publicação online</li>
-    </ul>
+        <section class="services section"> <!-- Classe 'services' e 'section' adicionada para estilização -->
+            <h2>O que está incluído</h2> <!-- Subtítulo da seção -->
+            <ul class="ul"> <!-- Lista não ordenada com classe para estilização -->
+                <li class="li">Página profissional</li> <!-- Item da lista com classe -->
+                <li class="li">Design moderno e responsivo</li>
+                <li class="li">Botão de contato direto no WhatsApp</li>
+                <li class="li">Publicação do site na internet</li>
+            </ul>
+        </section>
 
-    <h2>Benefícios</h2>
-    <ul>
-        <li>Funciona no celular</li>
-        <li>Carregamento rápido</li>
-        <li>Sem mensalidade</li>
-        <li>Entrega rápida</li>
-    </ul>
+        <section class="benefits section"> <!-- Classe 'benefits' e 'section' adicionada para estilização -->
+            <h2>Por que ter um site?</h2> <!-- Subtítulo da seção -->
+            <ul class="ul"> <!-- Lista não ordenada com classe para estilização -->
+                <li class="li">Funciona perfeitamente no celular</li> <!-- Item da lista com classe -->
+                <li class="li">Carregamento rápido</li>
+                <li class="li">Sem mensalidade</li>
+                <li class="li">Entrega rápida</li>
+            </ul>
+        </section>
 
-    <p>Quer um site simples e funcional?
-Clique no botão abaixo e conversamos.</p>
- <a class="btn" href="https://wa.me/38991216266">WhatsApp</a>
-</section>
+        <p class="cta-text"> <!-- Parágrafo com texto de call-to-action -->
+            Pronto para ter seu site profissional?
+            Clique no botão abaixo e fale comigo no WhatsApp.
+        </p>
+        <a class="btn-primary" href="https://wa.me/5538991216266" target="_blank"> <!-- Botão de call-to-action para WhatsApp -->
+            Falar no WhatsApp
+        </a>
+    </main>
 
-    <footer class="footer-minimal">
-      <div class="footer-content">
-        <img src="assets/Logo_Principal_Branco.png" alt="Fred Joaquim Tech" class="footer-logo">
-        <span>© 2026 Fred Joaquim dos Santos. Todos os direitos reservados.</span>
-      </div>
+    <footer class="footer-minimal"> <!-- Rodapé da página -->
+        <div class="footer-content"> <!-- Container para conteúdo do rodapé -->
+            <img src="assets/Logo_Principal_Branco.png" alt="Fred Joaquim Tech" class="footer-logo"> <!-- Logo com descrição alternativa para acessibilidade -->
+            <span>© 2026 Fred Joaquim dos Santos. Todos os direitos reservados.</span> <!-- Texto de copyright -->
+        </div>
     </footer>
-
 </body>
 </html>

@@ -1,108 +1,168 @@
+/* Reset básico para todos os elementos */
+* {
+    box-sizing: border-box; /* Inclui padding e borda no cálculo da largura/altura total */
+}
+
+/* Estilos gerais do corpo da página */
 body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: #0d1117;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin: 0; /* Remove margens padrão do navegador */
+    font-family: Arial, Helvetica, sans-serif; /* Define a fonte padrão */
+    background: #0d1117; /* Cor de fundo escura (quase preta) */
+    color: #fff; /* Cor do texto principal (branco) */
+    display: flex; /* Usa flexbox para alinhamento */
+    flex-direction: column; /* Alinha os elementos em coluna */
+    align-items: center; /* Centraliza os itens horizontalmente */
 }
 
-header {
-    width: 100%;
-    max-width: 900px;
+/* Estilos do cabeçalho */
+.header {
+    max-width: 900px; /* Largura máxima do conteúdo */
+    margin: 0 auto; /* Centraliza o cabeçalho horizontalmente */
+    text-align: center; /* Alinha o texto ao centro */
+    padding: 80px 20px 40px; /* Espaçamento interno (topo, lados, inferior) */
+}
+
+/* Estilos do subtítulo hero */
+.hero-subtitle {
+    font-size: 18px; /* Tamanho da fonte */
+    color: #c9d1d9; /* Cor do texto (cinza claro) */
+    margin-top: 10px; /* Espaçamento superior */
+    margin-bottom: 25px; /* Espaçamento inferior */
+}
+
+/* Container principal do conteúdo */
+.main {
+    width: 100%; /* Largura total */
+    max-width: 900px; /* Largura máxima */
+    padding: 40px 20px; /* Espaçamento interno (vertical, horizontal) */
+}
+
+/* Estilos para seções */
+.section {
+    margin-top: 60px; /* Espaçamento superior */
+    max-width: 700px; /* Largura máxima */
+    margin-left: auto; /* Centraliza horizontalmente (junto com margin-right) */
+    margin-right: auto; /* Centraliza horizontalmente (junto com margin-left) */
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+/* Estilos para listas não ordenadas dentro de seções */
+.section ul {
+    margin-top: 60px; /* Espaçamento superior */
+    width: 100%; /* Largura total */
+}
+
+/* Estilos para itens de lista dentro de seções */
+.section li {
+    margin-bottom: 12px; /* Espaçamento inferior entre itens */
+}
+
+/* Pseudo-elemento para adicionar um ícone de check antes de cada item da lista */
+.section li::before {
+    content: "✔ "; /* Conteúdo do pseudo-elemento */
+    color: #29b6f6; /* Cor do ícone (azul claro) */
+    margin-right: 8px; /* Espaçamento à direita do ícone */
+}
+
+/* Estilos para títulos h1 */
+.h1 {
+    font-size: clamp(24px, 4vw, 40px); /* Tamanho da fonte responsivo (mínimo 24px, preferencial 4vw, máximo 40px) */
+    margin: 20px 0; /* Espaçamento vertical */
+    text-align: center; /* Alinha o texto ao centro */
+}
+
+/* Estilos para títulos h2 */
+.h2 {
+    font-size: 28px; /* Tamanho da fonte */
+    font-weight: 600; /* Peso da fonte (semi-negrito) */
+    margin-bottom: 20px; /* Espaçamento inferior */
+    text-align: center; /* Alinha o texto ao centro */
+}
+
+/* Estilos para botões primários */
+.btn-primary {
+    background: #29b6f6; /* Cor de fundo (azul claro) */
+    color: #0d1117; /* Cor do texto (quase preto) */
+    padding: 16px 32px; /* Espaçamento interno (vertical, horizontal) */
+    font-size: 16px; /* Tamanho da fonte */
+    border-radius: 8px; /* Arredondamento das bordas */
+    font-weight: 700; /* Peso da fonte (negrito) */
+    text-decoration: none; /* Remove sublinhado do link */
+    display: inline-block; /* Permite aplicar padding e respeitar o fluxo inline */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Transição suave para efeitos hover */
+}
+
+/* Efeito hover para botões primários */
+.btn-primary:hover {
+    transform: translateY(-2px); /* Move o botão 2px para cima */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Adiciona sombra ao redor */
+}
+
+/* Estilos para listas não ordenadas */
+.ul {
+    list-style: none; /* Remove marcadores padrão da lista */
+    padding: 0; /* Remove espaçamento interno padrão */
+}
+
+/* Estilos para itens de lista */
+.li {
+    margin-bottom: 10px; /* Espaçamento inferior entre itens */
+}
+
+/* Estilos para o texto de call-to-action - NOVO */
+.cta-text {
     text-align: center;
-    justify-content: space-between;
-    align-items: center;
-    padding:20px 0;
+    font-size: 18px;
+    color: #c9d1d9;
+    margin: 40px auto 20px;
+    max-width: 700px;
 }
 
-section {
-    margin-left: 20px;
-    text-decoration: none;
-    font-weight: bolder;
-    max-width: 900px;
-    padding: 20px;
-}
-
-section ul {
-    list-style: none;
-    padding: 0;
-}
-
-section ul li::before {
-    content: "✔ ";
-    color: #29b6f6;
-}
-
-h1 {
-    font-size: clamp(24px, 4vw, 40px);
-    margin: 20px 0;
+/* Botão CTA centralizado */
+main > .btn-primary:last-of-type {
+    display: block;
+    width: fit-content;
+    margin: 0 auto 60px;
     text-align: center;
 }
 
-h2 {
-    font-size: clamp(16px, 3vw, 22px);
-    font-weight: normal;
-    text-align: center;
-}
-
-.btn {
-    background: #29b6f6;
-    color: #181818;
-    border-radius: 10px;
-    text-decoration: none;
-    padding: 14px 20px;
-    font-weight: bold;
-    margin: 20px 0;
-    display: inline-block;
-}
-
-ul {
-    font-size: 20px;
-    margin: 20px 0;
-}
-
-li {
-    margin-bottom: 10px;
-}
-
+/* Estilos para o rodapé */
 .footer-minimal {
-  width: 100%;
-  padding: 20px 0;
-  background: transparent; /* sem cor por padrão */
+    width: 100%; /* Largura total */
+    padding: 20px 0; /* Espaçamento vertical */
+    background: transparent; /* Fundo transparente (sem cor por padrão) */
 }
 
+/* Container para o conteúdo do rodapé */
 .footer-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 12px;
-
-  font-size: 15px;  /* ← pode ajustar */
-  color:#fff;      /* ← pode ajustar a cor */
+    display: flex; /* Usa flexbox para alinhamento */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    gap: 12px; /* Espaçamento entre elementos filhos */
+    font-size: 14px; /* Tamanho da fonte */
+    color: #9ca3af; /* Cor do texto (cinza) */
 }
 
+/* Estilos para a logo no rodapé */
 .footer-logo {
-  width: 200px;     /* ← pode ajustar o tamanho */
-  height: auto;
+    width: 140px; /* Largura da logo */
+    height: auto; /* Altura automática para manter proporção */
 }
 
-@media (max-width: 480px) {
-  h1 {
-    font-size: 26px;
-    text-align: center;
-  }
+/* Media query para telas menores que 768px (dispositivos móveis) */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 26px; /* Tamanho da fonte reduzido */
+        text-align: center; /* Alinha o texto ao centro */
+    }
 
-  h2 {
-    font-size: 16px;
-    text-align: center;
-  }
+    h2 {
+        font-size: 16px; /* Tamanho da fonte reduzido */
+        text-align: center; /* Alinha o texto ao centro */
+    }
 
-  body {
-    padding: 20px;
-    height: auto;
-  }
+    body {
+        padding: 20px; /* Adiciona espaçamento interno ao corpo */
+        height: auto; /* Altura automática */
+    }
 }
-
-
