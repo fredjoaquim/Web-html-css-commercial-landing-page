@@ -15,6 +15,3 @@ Landing page desenvolvida com foco em conversão, aplicando boas práticas de UI
 - Estrutura semântica
 - Seções estratégicas de conversão
 - Call-to-action otimizado
-
-## 📷 Preview
-![Preview](./assets/preview.png)
